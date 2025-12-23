@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { compressImage } from '../services/media';
 
-interface ZenEditorProps {
+interface ByEditorProps {
   initialContent?: string;
   onChange?: (html: string) => void;
   placeholder?: string;
@@ -27,7 +27,7 @@ const EMOJIS = [
   '👎', '🎉', '❤️', '🔥', '✅', '❌', '⭐'
 ];
 
-export const ZenEditor: React.FC<ZenEditorProps> = ({
+export const ByEditor: React.FC<ByEditorProps> = ({
   initialContent = '',
   onChange,
   placeholder = 'Start writing... (Type ``` for code block)'

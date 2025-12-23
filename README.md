@@ -1,20 +1,53 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# BY Editor
 
-# Run and deploy your AI Studio app
+A modern, lightweight rich-text editor component for React applications. Designed to be simple, fast, and easy to integrate.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1eLZnlNBdbK9-0c3EkAvOdSFUiU73rak3
+- **Rich Text Formatting**: Bold, Italic, Strikethrough, Underline, Fonts, and Colors.
+- **Markdown Shortcuts**: 
+  - Type `# ` for H1, `## ` for H2.
+  - Type `- ` or `1. ` for lists.
+  - Type `> ` for blockquotes.
+  - Type ` ``` ` for code blocks.
+- **Syntax Highlighting**: Integrated with Highlight.js for beautiful code blocks (Atom One Dark theme).
+- **Media Support**: 
+  - **Images**: Automatic client-side compression before insertion.
+  - **Videos**: Easy embedding for YouTube and Vimeo.
+- **Tables**: Insert and edit responsive tables.
+- **Dark Mode**: Fully compatible with Tailwind CSS dark mode.
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- **React**: Core UI library.
+- **Tailwind CSS**: For styling and theming.
+- **RemixIcon**: For modern, clean icons.
+- **Highlight.js**: For code syntax highlighting.
 
+## Usage
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Import the component into your React application:
+
+```tsx
+import { ByEditor } from './components/ByEditor';
+
+const MyPage = () => {
+  const handleEditorChange = (html: string) => {
+    console.log('Editor content:', html);
+  };
+
+  return (
+    <div className="editor-wrapper">
+      <ByEditor 
+        initialContent="<p>Start writing...</p>" 
+        onChange={handleEditorChange} 
+        placeholder="Type something amazing..." 
+      />
+    </div>
+  );
+};
+```
+
+## Credits
+
+Built with ❤️ by **Sam Yao**.

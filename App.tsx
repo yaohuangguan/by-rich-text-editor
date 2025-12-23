@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ZenEditor } from './components/ZenEditor';
+import { ByEditor } from './components/ByEditor';
 
 const App: React.FC = () => {
   const [content, setContent] = useState<string>('<h2>Welcome to BY Editor</h2><p>This is a <b>rich text editor</b> built for modern React applications.</p><ul><li>Supports Markdown shortcuts</li><li>Image compression & upload</li><li>Syntax highlighting</li></ul><pre class="code-block-wrapper" spellcheck="false"><code class="language-javascript">console.log("Hello World");</code></pre><p><br/></p>');
@@ -38,7 +38,7 @@ const App: React.FC = () => {
 
       {/* Editor Container */}
       <main className="w-full max-w-5xl h-[600px] shadow-2xl rounded-xl overflow-hidden ring-1 ring-black/5">
-        <ZenEditor 
+        <ByEditor 
           initialContent={content} 
           onChange={(html) => setContent(html)} 
           placeholder="Start typing your masterpiece..." 
