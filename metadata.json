@@ -1,0 +1,5 @@
+{
+  "name": "BY Editor Tool",
+  "description": "A lightweight, rich-text editor React component featuring code highlighting, image compression, and a clean UI.",
+  "requestFramePermissions": []
+}

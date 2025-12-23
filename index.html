@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BY Editor Demo</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#3B82F6',
+            },
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  maxWidth: 'none',
+                  color: theme('colors.gray.700'),
+                  a: {
+                    color: theme('colors.blue.500'),
+                    '&:hover': {
+                      color: theme('colors.blue.700'),
+                    },
+                  },
+                },
+              },
+              dark: {
+                css: {
+                  color: theme('colors.gray.300'),
+                  a: {
+                    color: theme('colors.blue.400'),
+                    '&:hover': {
+                      color: theme('colors.blue.600'),
+                    },
+                  },
+                },
+              },
+            }),
+          },
+        },
+      }
+    </script>
+    <!-- RemixIcon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Highlight.js (Atom One Dark Theme) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Tailwind Typography Plugin (Simulated for this environment, usually npm install) -->
+    <style>
+      /* Minimal prose simulation if @tailwindcss/typography is not available via simple CDN script */
+      .prose { max-width: 65ch; }
+      .prose blockquote { border-left-width: 4px; padding-left: 1em; font-style: italic; }
+      .prose ul { list-style-type: disc; padding-left: 1.5em; }
+      .prose ol { list-style-type: decimal; padding-left: 1.5em; }
+      .prose h1 { font-size: 2.25em; font-weight: 800; margin-bottom: 0.8em; }
+      .prose h2 { font-size: 1.5em; font-weight: 700; margin-top: 1.5em; margin-bottom: 0.8em; }
+      .prose p { margin-bottom: 1.25em; line-height: 1.6; }
+      .prose a { text-decoration: underline; }
+      /* Custom scrollbar */
+      .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 3px; }
+      .dark .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #475569; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+  </body>
+</html>
